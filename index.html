@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="hi" class="h-full">
+ <head>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e4078">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="SkPainter" />
+<link rel="manifest" href="/site.webmanifest" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKPainter – House Painter in Shajapur | Home Painting Services Ashta | Wall Painter Near Me MP</title>
+  <meta name="description" content="SKPainter provides professional home painting services in Shajapur and Ashta, Madhya Pradesh. Interior, exterior, texture, wallpaper — trusted quality by Suresh Mimrot. Call 9754817745.">
+  <meta name="keywords" content="House Painter in Shajapur, Home Painting Services Ashta, Wall Painter Near Me MP, SKPainter, Suresh Mimrot">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '375px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+ 
+    body {
+      box-sizing: border-box;
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      scroll-behavior: smooth;
+    }
+    html { scroll-behavior: smooth; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-animate {
+      animation: fadeInUp 1s ease forwards;
+    }
+    .hero-animate-delay-1 {
+      animation: fadeInUp 1s ease 0.2s forwards;
+      opacity: 0;
+    }
+    .hero-animate-delay-2 {
+      animation: fadeInUp 1s ease 0.4s forwards;
+      opacity: 0;
+    }
+    .hero-animate-delay-3 {
+      animation: fadeInUp 1s ease 0.6s forwards;
+      opacity: 0;
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    .pulse-animation {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Service card hover */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .service-card:hover .service-icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+    .service-icon {
+      transition: transform 0.4s ease;
+    }
+
+    /* Gallery hover */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(30,64,120,0.85), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    .gallery-item:hover .gallery-visual {
+      transform: scale(1.08);
+    }
+    .gallery-visual {
+      transition: transform 0.6s ease;
+    }
+
+    /* Testimonial card */
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Sticky mobile buttons */
+    .sticky-mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 10px 16px;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-mobile-bar { display: flex; gap: 10px; }
+    }
+
+    /* WhatsApp floating */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float { bottom: 90px; right: 16px; width: 54px; height: 54px; }
+    }
+
+    /* Nav styles */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Geometric patterns */
+    .pattern-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #1e4078; border-radius: 4px; }
+
+    /* Form input focus */
+    .form-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(30,64,120,0.15);
+    }
+
+    /* Section divider */
+    .section-divider {
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    /* Before/After labels */
+    .ba-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 640px) {
+      /* Extra small devices */
+      body {
+        font-size: 14px;
+      }
+      
+      h1, h2, h3 {
+        line-height: 1.2;
+      }
+
+      /* Navigation */
+      #main-nav {
+        padding: 0.5rem 0;
+      }
+
+      /* Hero section */
+      .text-3xl { font-size: 1.5rem !important; }
+      .text-4xl { font-size: 1.875rem !important; }
+      
+      /* Remove decorative elements on mobile */
+      .float-animation {
+        display: none !important;
+      }
+
+      /* Gallery height */
+      .gallery-item {
+        height: 220px !important;
+      }
+
+      /* Sticky mobile bar spacing */
+      .whatsapp-float {
+        bottom: 110px;
+        right: 12px;
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Button sizing for touch */
+      button, a[href^="tel:"], a[href^="https://wa.me"] {
+        min-height: 48px;
+        min-width: 48px;
+      }
+
+      /* Form inputs */
+      .form-input {
+        min-height: 48px !important;
+      }
+
+      /* Trust badges - stack vertically */
+      .hero-animate-delay-3 {
+        flex-direction: column;
+      }
+
+      /* Section padding */
+      section {
+        padding: 3rem 0 !important;
+      }
+
+      /* Grid adjustments */
+      .grid {
+        gap: 1rem !important;
+      }
+
+      /* SVG text sizing */
+      svg text {
+        font-size: 12px !important;
+      }
+    }
+
+    /* Small tablets and large phones */
+    @media (min-width: 641px) and (max-width: 768px) {
+      .gallery-item {
+        height: 240px;
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+
+      .text-4xl { font-size: 2rem !important; }
+      .text-5xl { font-size: 2.25rem !important; }
+    }
+
+    /* Tablets landscape */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      section {
+        padding: 3rem 0;
+      }
+
+      .gallery-item {
+        height: 280px;
+      }
+    }
+
+    /* Large devices */
+    @media (min-width: 1025px) {
+      section {
+        padding: 4rem 0;
+      }
+    }
+
+    /* Extra large screens */
+    @media (min-width: 1280px) {
+      section {
+        padding: 6rem 0;
+      }
+
+      .max-w-7xl {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      button, a {
+        padding: 1rem;
+      }
+
+      .service-card:active {
+        transform: translateY(-8px);
+      }
+
+      .gallery-item:active .overlay {
+        opacity: 1;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      nav, footer, .whatsapp-float, .sticky-mobile-bar {
+        display: none;
+      }
+
+      section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    /* Landscape mode optimization */
+    @media (orientation: landscape) and (max-height: 600px) {
+      #main-nav {
+        height: 3.5rem;
+      }
+
+      section {
+        padding: 1.5rem 0;
+      }
+
+      .gallery-item {
+        height: 180px;
+      }
+
+      header {
+        padding-top: 56px !important;
+      }
+    }
+
+    /* High resolution displays */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      /* Optimizations for retina/high-DPI displays */
+      svg {
+        shape-rendering: crispEdges;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="w-full h-full overflow-auto" style="background-color: #f8f9fb;"><!-- Navigation -->
+   <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(30,64,120,0.08);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 sm:h-20"><a href="#hero" class="flex items-center gap-2">
+       <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+        <svg width="22" height="22" viewbox="0 0 24 24" fill="none"><path d="M3 21V9l9-7 9 7v12H3z" stroke="white" stroke-width="2" stroke-linejoin="round" /> <path d="M9 21v-6h6v6" stroke="white" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <div><span class="font-extrabold text-lg" style="color: #1e4078;">SK</span><span class="font-bold text-lg" style="color: #e8772e;">Painter</span>
+       </div></a>
+      <div class="hidden md:flex items-center gap-8"><a href="#about" class="nav-link text-sm font-medium" style="color: #4a5568;">About</a> <a href="#services" class="nav-link text-sm font-medium" style="color: #4a5568;">Services</a> <a href="#gallery" class="nav-link text-sm font-medium" style="color: #4a5568;">Gallery</a> <a href="#testimonials" class="nav-link text-sm font-medium" style="color: #4a5568;">Reviews</a> <a href="tel:9754817745" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:shadow-lg" style="background: linear-gradient(135deg, #e8772e, #f59e42);"> 📞 Call Now </a>
+      </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg" style="color: #1e4078;" aria-label="Toggle menu">
+       <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6" /> <line x1="3" y1="12" x2="21" y2="12" /> <line x1="3" y1="18" x2="21" y2="18" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t" style="background: white; border-color: #e2e8f0;">
+     <div class="px-4 py-4 space-y-3"><a href="#about" class="block py-2 text-sm font-medium" style="color: #4a5568;">About</a> <a href="#services" class="block py-2 text-sm font-medium" style="color: #4a5568;">Services</a> <a href="#gallery" class="block py-2 text-sm font-medium" style="color: #4a5568;">Gallery</a> <a href="#testimonials" class="block py-2 text-sm font-medium" style="color: #4a5568;">Reviews</a> <a href="#contact" class="block py-2 text-sm font-medium" style="color: #4a5568;">Contact</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <header id="hero" class="relative overflow-hidden" style="padding-top: 80px;">
+    <div class="absolute inset-0 pattern-dots" style="background-color: #1e4078;"></div><!-- Decorative shapes -->
+    <div class="absolute top-20 right-10 w-32 h-32 rounded-full opacity-10 float-animation" style="background: #e8772e;"></div>
+    <div class="absolute bottom-20 left-10 w-24 h-24 rounded-full opacity-10 float-animation" style="background: #f59e42; animation-delay: 1s;"></div>
+    <div class="absolute top-40 left-1/4 w-16 h-16 rounded-lg opacity-5 rotate-45" style="background: white;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+     <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div class="text-center lg:text-left">
+       <div class="hero-animate inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6" style="background: rgba(232,119,46,0.2); color: #f59e42;"><span>⭐</span> Shajapur &amp; Ashta की सेवा
+       </div>
+       <h1 id="hero-headline" class="hero-animate-delay-1 text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-white mb-3 sm:mb-5">Ghar Sirf Deewar<br>Nahi Hota…</h1>
+       <p id="hero-subheadline" class="hero-animate-delay-2 text-sm sm:text-lg lg:text-xl font-medium mb-2 sm:mb-4" style="color: rgba(255,255,255,0.85);">Professional Home Painting</p>
+       <p class="hero-animate-delay-2 text-xs sm:text-base mb-6 sm:mb-8" style="color: rgba(255,255,255,0.65);">Skilled labour, high-tech machines, trusted service.</p>
+       <div class="hero-animate-delay-3 flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8"><a href="tel:9754817745" class="inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3 sm:py-4 rounded-2xl text-sm sm:text-base font-bold text-white transition-all hover:shadow-xl hover:scale-105 active:scale-95" style="background: linear-gradient(135deg, #e8772e, #f59e42); min-height: 48px;"> <span>📞</span> <span class="hidden sm:inline">Call Now</span><span class="sm:hidden">Call</span> </a> <a href="https://wa.me/919754817745?text=Hello%20SKPainter%2C%20I%20need%20painting%20service" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3 sm:py-4 rounded-2xl text-sm sm:text-base font-bold transition-all hover:shadow-xl hover:scale-105 active:scale-95" style="background: rgba(255,255,255,0.12); color: white; border: 2px solid rgba(255,255,255,0.25); min-height: 48px;"> <span>💬</span> <span class="hidden sm:inline">WhatsApp Now</span><span class="sm:hidden">WhatsApp</span> </a>
+       </div><!-- Trust badges -->
+       <div class="hero-animate-delay-3 flex items-center gap-2 sm:gap-6 justify-center lg:justify-start flex-wrap">
+        <div class="text-center">
+         <div class="text-lg sm:text-2xl font-extrabold text-white">
+          500+
+         </div>
+         <div class="text-xs" style="color: rgba(255,255,255,0.6);">
+          Happy Homes
+         </div>
+        </div>
+        <div class="w-px h-8 sm:h-10 hidden sm:block" style="background: rgba(255,255,255,0.2);"></div>
+        <div class="text-center">
+         <div class="text-lg sm:text-2xl font-extrabold text-white">
+          10+
+         </div>
+         <div class="text-xs" style="color: rgba(255,255,255,0.6);">
+          Years
+         </div>
+        </div>
+        <div class="w-px h-8 sm:h-10 hidden sm:block" style="background: rgba(255,255,255,0.2);"></div>
+        <div class="text-center">
+         <div class="text-lg sm:text-2xl font-extrabold text-white">
+          100%
+         </div>
+         <div class="text-xs" style="color: rgba(255,255,255,0.6);">
+          Satisfaction
+         </div>
+        </div>
+       </div>
+      </div><!-- Hero visual -->
+      <div class="hidden lg:flex justify-center items-center">
+       <div class="relative">
+        <div class="w-80 h-80 xl:w-96 xl:h-96 rounded-3xl overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #2a5298, #1e4078);"><!-- House SVG illustration -->
+         <svg viewbox="0 0 400 400" class="w-full h-full"><!-- Sky --> <rect width="400" height="400" fill="url(#skyGrad)" /> <defs>
+           <lineargradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#87CEEB" />
+            <stop offset="100%" stop-color="#E0F0FF" />
+           </lineargradient>
+          </defs> <!-- Sun --> <circle cx="320" cy="80" r="40" fill="#FFD700" opacity="0.9" /> <circle cx="320" cy="80" r="55" fill="#FFD700" opacity="0.15" /> <!-- Clouds --> <ellipse cx="100" cy="70" rx="40" ry="15" fill="white" opacity="0.7" /> <ellipse cx="80" cy="65" rx="30" ry="12" fill="white" opacity="0.5" /> <!-- Ground --> <rect x="0" y="300" width="400" height="100" fill="#7CB342" /> <rect x="0" y="310" width="400" height="90" fill="#689F38" /> <!-- House body --> <rect x="80" y="160" width="240" height="150" rx="4" fill="#FFF3E0" /> <rect x="80" y="160" width="240" height="150" rx="4" stroke="#E8772E" stroke-width="3" fill="none" /> <!-- Roof --> <polygon points="60,165 200,70 340,165" fill="#E8772E" /> <polygon points="70,165 200,80 330,165" fill="#F59E42" /> <!-- Door --> <rect x="170" y="230" width="60" height="80" rx="30" fill="#5D4037" /> <rect x="175" y="235" width="50" height="75" rx="25" fill="#795548" /> <circle cx="215" cy="270" r="4" fill="#FFD700" /> <!-- Windows --> <rect x="105" y="195" width="45" height="40" rx="4" fill="#81D4FA" /> <rect x="105" y="195" width="45" height="40" rx="4" stroke="#1e4078" stroke-width="2" fill="none" /> <line x1="127" y1="195" x2="127" y2="235" stroke="#1e4078" stroke-width="1.5" /> <line x1="105" y1="215" x2="150" y2="215" stroke="#1e4078" stroke-width="1.5" /> <rect x="250" y="195" width="45" height="40" rx="4" fill="#81D4FA" /> <rect x="250" y="195" width="45" height="40" rx="4" stroke="#1e4078" stroke-width="2" fill="none" /> <line x1="272" y1="195" x2="272" y2="235" stroke="#1e4078" stroke-width="1.5" /> <line x1="250" y1="215" x2="295" y2="215" stroke="#1e4078" stroke-width="1.5" /> <!-- Paint brush --> <g transform="translate(310, 120) rotate(25)">
+           <rect x="0" y="0" width="12" height="60" rx="2" fill="#8D6E63" />
+           <rect x="-4" y="55" width="20" height="30" rx="3" fill="#E8772E" />
+           <rect x="-2" y="78" width="16" height="6" rx="1" fill="#F59E42" />
+          </g> <!-- Paint drops --> <circle cx="330" cy="180" r="5" fill="#E8772E" opacity="0.7" /> <circle cx="340" cy="200" r="3" fill="#F59E42" opacity="0.6" /> <!-- Flowers --> <circle cx="130" cy="325" r="6" fill="#FF7043" /> <circle cx="130" cy="325" r="3" fill="#FFD700" /> <circle cx="270" cy="320" r="6" fill="#FF7043" /> <circle cx="270" cy="320" r="3" fill="#FFD700" /> <!-- Fence --> <rect x="30" y="290" width="6" height="30" rx="1" fill="#BCAAA4" /> <rect x="55" y="290" width="6" height="30" rx="1" fill="#BCAAA4" /> <rect x="25" y="295" width="42" height="4" rx="1" fill="#BCAAA4" /> <rect x="340" y="290" width="6" height="30" rx="1" fill="#BCAAA4" /> <rect x="365" y="290" width="6" height="30" rx="1" fill="#BCAAA4" /> <rect x="335" y="295" width="42" height="4" rx="1" fill="#BCAAA4" /> <!-- Text --> <text x="200" y="370" text-anchor="middle" fill="white" font-size="18" font-weight="700" font-family="Outfit">
+           🎨 Your Dream Home
+          </text>
+         </svg>
+        </div><!-- Floating badge -->
+        <div class="absolute -bottom-4 -left-4 px-5 py-3 rounded-2xl shadow-xl float-animation" style="background: white;">
+         <div class="flex items-center gap-2"><span class="text-2xl">🏠</span>
+          <div>
+           <div class="text-xs font-bold" style="color: #1e4078;">
+            Trusted Service
+           </div>
+           <div class="text-xs" style="color: #718096;">
+            Since 10+ Years
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Wave divider -->
+    <div class="relative" style="margin-top: -1px;">
+     <svg viewbox="0 0 1440 80" preserveaspectratio="none" style="display: block; width: 100%;"><path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="#f8f9fb" />
+     </svg>
+    </div>
+   </header><!-- About Section -->
+   <section id="about" class="py-16 sm:py-20 lg:py-24" style="background: #f8f9fb;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-on-scroll"><!-- About visual -->
+       <div class="relative">
+        <div class="rounded-3xl overflow-hidden shadow-xl" style="background: linear-gradient(135deg, #1e4078, #2a5298); padding: 40px;">
+         <svg viewbox="0 0 300 280" class="w-full"><!-- Painter at work --> <rect width="300" height="280" rx="16" fill="none" /> <!-- Wall being painted --> <rect x="30" y="30" width="240" height="200" rx="8" fill="#FFF3E0" /> <rect x="30" y="30" width="120" height="200" rx="8" fill="#E8772E" opacity="0.3" /> <!-- Paint roller creating gradient effect --> <rect x="130" y="50" width="40" height="160" rx="4" fill="#E8772E" opacity="0.6" /> <rect x="145" y="50" width="25" height="160" rx="4" fill="#F59E42" opacity="0.4" /> <!-- Roller tool --> <rect x="140" y="35" width="30" height="18" rx="9" fill="#8D6E63" /> <rect x="152" y="15" width="6" height="25" rx="2" fill="#5D4037" /> <!-- Paint can --> <rect x="210" y="195" width="40" height="35" rx="4" fill="#CFD8DC" /> <rect x="213" y="200" width="34" height="15" rx="2" fill="#E8772E" /> <rect x="215" y="190" width="30" height="8" rx="2" fill="#B0BEC5" /> <!-- Stars --> <text x="80" y="80" font-size="20" opacity="0.6">
+           ⭐
+          </text> <text x="220" y="100" font-size="16" opacity="0.5">
+           ✨
+          </text> <text x="60" y="180" font-size="14" opacity="0.4">
+           🎨
+          </text> <!-- Bottom text --> <text x="150" y="265" text-anchor="middle" fill="white" font-size="14" font-weight="600" font-family="Outfit">
+           Professional &amp; Trusted
+          </text>
+         </svg>
+        </div>
+        <div class="absolute -top-4 -right-4 px-4 py-3 rounded-2xl shadow-lg float-animation" style="background: #e8772e;"><span class="text-white font-bold text-sm">10+ Years ✨</span>
+        </div>
+       </div>
+      </div>
+      <div class="animate-on-scroll">
+       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.1); color: #e8772e;">
+        हमारे बारे में
+       </div>
+       <h2 id="about-heading" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-6" style="color: #1e4078;">About SKPainter</h2>
+       <div class="section-divider mb-6" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+       <p id="about-text" class="text-base leading-relaxed mb-6" style="color: #4a5568;">SKPainter is a trusted home painting service in Shajapur and Ashta. Led by Suresh Mimrot, we provide professional wall painting, texture design, wallpaper installation, and color consultation services. We believe in honest work, clean finishing, and customer satisfaction.</p>
+       <div class="grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 p-3 rounded-xl" style="background: rgba(30,64,120,0.05);"><span class="text-2xl">🎯</span>
+         <div>
+          <div class="text-sm font-bold" style="color: #1e4078;">
+           Quality First
+          </div>
+          <div class="text-xs" style="color: #718096;">
+           Best materials used
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl" style="background: rgba(30,64,120,0.05);"><span class="text-2xl">🤝</span>
+         <div>
+          <div class="text-sm font-bold" style="color: #1e4078;">
+           Trust
+          </div>
+          <div class="text-xs" style="color: #718096;">
+           Honest &amp; reliable
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl" style="background: rgba(30,64,120,0.05);"><span class="text-2xl">⏰</span>
+         <div>
+          <div class="text-sm font-bold" style="color: #1e4078;">
+           On Time
+          </div>
+          <div class="text-xs" style="color: #718096;">
+           Timely completion
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl" style="background: rgba(30,64,120,0.05);"><span class="text-2xl">💰</span>
+         <div>
+          <div class="text-sm font-bold" style="color: #1e4078;">
+           Affordable
+          </div>
+          <div class="text-xs" style="color: #718096;">
+           Fair pricing always
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="py-16 sm:py-20 lg:py-24" style="background: white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-14 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.1); color: #e8772e;">
+       हमारी सेवाएं
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4" style="color: #1e4078;">Our Services</h2>
+      <div class="section-divider mx-auto mb-4" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+      <p class="text-base max-w-xl mx-auto" style="color: #718096;">Har ghar ki zaroorat ke liye complete painting solutions</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"><!-- Service 1 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><path d="M3 21V9l9-7 9 7v12H3z" stroke="white" stroke-width="2" stroke-linejoin="round" /> <path d="M9 21v-6h6v6" stroke="white" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Home Interior Painting</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">Ghar ke andar ki deewaron ko naya look dein. Premium paints aur clean finishing ke saath.</p>
+      </div><!-- Service 2 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #e8772e, #f59e42);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2" /> <path d="M3 9h18M9 3v18" stroke="white" stroke-width="2" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Exterior Wall Painting</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">Bahar ki deewar ho ya boundary wall — weather-proof paint se ghar chamkaye.</p>
+      </div><!-- Service 3 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="white" stroke-width="2" /> <path d="M2 8h20M8 4v16M14 4v16" stroke="white" stroke-width="1.5" opacity="0.5" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Wallpaper Installation</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">Modern wallpaper designs — drawing room, bedroom ya pooja room ke liye perfect.</p>
+      </div><!-- Service 4 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #e8772e, #f59e42);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2" /> <path d="M12 3c2 4 2 8 0 12M3 12h18" stroke="white" stroke-width="1.5" opacity="0.6" /> <path d="M8 6c1 3 1 6 0 9M16 6c-1 3-1 6 0 9" stroke="white" stroke-width="1" opacity="0.4" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Texture &amp; Designer Walls</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">3D texture, metallic finish, aur designer patterns se ghar ko premium look dein.</p>
+      </div><!-- Service 5 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="white" stroke-width="2" /> <circle cx="12" cy="12" r="2" fill="white" /> <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Color Consultation</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">Kaun sa color aapke ghar pe sabse achha lagega? Free advice from experts.</p>
+      </div><!-- Service 6 -->
+      <div class="service-card animate-on-scroll rounded-2xl p-6 sm:p-8 cursor-pointer" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="service-icon w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #e8772e, #f59e42);">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none"><path d="M4 20h16M4 20V10l8-6 8 6v10" stroke="white" stroke-width="2" stroke-linejoin="round" /> <path d="M14 20v-4a2 2 0 00-4 0v4" stroke="white" stroke-width="2" /> <path d="M2 22h20" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-bold mb-2" style="color: #1e4078;">Repainting &amp; Renovation</h3>
+       <p class="text-sm leading-relaxed" style="color: #718096;">Purane ghar ko naya jaisa bana dein. Complete renovation painting services.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Why Choose Us -->
+   <section id="why-us" class="py-16 sm:py-20 lg:py-24 relative overflow-hidden" style="background: #1e4078;">
+    <div class="absolute inset-0 pattern-dots"></div>
+    <div class="absolute top-10 right-20 w-40 h-40 rounded-full opacity-5" style="background: #e8772e;"></div>
+    <div class="absolute bottom-10 left-20 w-32 h-32 rounded-full opacity-5" style="background: #f59e42;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-14 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.2); color: #f59e42;">
+       हमें क्यों चुनें
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">Why Choose SKPainter?</h2>
+      <div class="section-divider mx-auto" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="animate-on-scroll text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+       <div class="text-4xl mb-4">
+        👷
+       </div>
+       <h3 class="text-base font-bold text-white mb-2">Skilled Labour</h3>
+       <p class="text-xs" style="color: rgba(255,255,255,0.6);">Experienced &amp; trained team</p>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+       <div class="text-4xl mb-4">
+        ⚡
+       </div>
+       <h3 class="text-base font-bold text-white mb-2">High-Tech Machines</h3>
+       <p class="text-xs" style="color: rgba(255,255,255,0.6);">Spray &amp; modern tools</p>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+       <div class="text-4xl mb-4">
+        ✨
+       </div>
+       <h3 class="text-base font-bold text-white mb-2">Clean &amp; Timely</h3>
+       <p class="text-xs" style="color: rgba(255,255,255,0.6);">On time, every time</p>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+       <div class="text-4xl mb-4">
+        💰
+       </div>
+       <h3 class="text-base font-bold text-white mb-2">Affordable Pricing</h3>
+       <p class="text-xs" style="color: rgba(255,255,255,0.6);">Best rates guaranteed</p>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+       <div class="text-4xl mb-4">
+        🏆
+       </div>
+       <h3 class="text-base font-bold text-white mb-2">Trusted Locally</h3>
+       <p class="text-xs" style="color: rgba(255,255,255,0.6);">500+ happy families</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Before & After Gallery -->
+   <section id="gallery" class="py-16 sm:py-20 lg:py-24" style="background: #f8f9fb;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-14 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.1); color: #e8772e;">
+       हमारा काम देखें
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4" style="color: #1e4078;">Before &amp; After Gallery</h2>
+      <div class="section-divider mx-auto mb-4" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+      <p class="text-base max-w-xl mx-auto" style="color: #718096;">Dekhen kaise humne gharon ko naya roop diya</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Gallery Item 1 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <pattern id="dustPattern" x="0" y="0" width="20" height="20" patternunits="userSpaceOnUse"><rect fill="#9E9E9E" width="20" height="20" /> <circle cx="5" cy="5" r="2" fill="#757575" opacity="0.6" /> <circle cx="15" cy="12" r="1.5" fill="#757575" opacity="0.4" /></pattern>
+          <pattern id="cleanPattern" x="0" y="0" width="30" height="30" patternunits="userSpaceOnUse"><rect fill="#E8772E" width="30" height="30" /> <rect x="0" y="0" width="30" height="30" fill="url(#glossGrad)" opacity="0.3" /></pattern>
+          <lineargradient id="glossGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="white" opacity="0.4" /> <stop offset="100%" stop-color="white" opacity="0" /></lineargradient>
+         </defs><!-- Before side - Dirty wall --> <rect width="200" height="260" fill="#A1887F" /> <rect width="200" height="260" fill="url(#dustPattern)" /> <rect x="10" y="10" width="180" height="240" fill="none" stroke="#9E9E9E" stroke-width="3" stroke-dasharray="5,5" opacity="0.4" /> <text x="100" y="50" text-anchor="middle" fill="#5D4037" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">🧱</text> <text x="100" y="220" text-anchor="middle" fill="#5D4037" font-size="12">Dull &amp; Worn</text> <!-- After side - Fresh paint --> <rect x="200" width="200" height="260" fill="#E8772E" /> <rect x="200" width="200" height="260" fill="url(#cleanPattern)" /> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">✨</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">Fresh &amp; Bright</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #e8772e;">Living Room</span>
+         <p class="text-white text-sm mt-2 font-medium">Complete interior transformation</p>
+        </div>
+       </div>
+      </div><!-- Gallery Item 2 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <pattern id="crackPattern" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse"><rect fill="#B0BEC5" width="40" height="40" /> <path d="M0,10 Q5,15 10,10 T20,10" stroke="#90A4AE" stroke-width="0.5" fill="none" opacity="0.6" /> <path d="M15,0 Q18,10 15,20" stroke="#90A4AE" stroke-width="0.5" fill="none" opacity="0.5" /> <circle cx="8" cy="25" r="1" fill="#78909C" opacity="0.7" /></pattern>
+          <pattern id="freshPattern" x="0" y="0" width="25" height="25" patternunits="userSpaceOnUse"><rect fill="#1e4078" width="25" height="25" /> <rect x="1" y="1" width="23" height="23" fill="url(#freshGrad)" opacity="0.2" /></pattern>
+          <lineargradient id="freshGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="white" /> <stop offset="100%" stop-color="black" /></lineargradient>
+         </defs><!-- Before side - Weathered exterior --> <rect width="200" height="260" fill="url(#crackPattern)" /> <g opacity="0.3"><rect x="15" y="40" width="80" height="80" fill="#B39DDB" /> <rect x="105" y="80" width="60" height="60" fill="#CE93D8" /> <rect x="30" y="160" width="120" height="50" fill="#C39BD3" /></g> <text x="100" y="50" text-anchor="middle" fill="#455A64" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">🏚️</text> <text x="100" y="220" text-anchor="middle" fill="#455A64" font-size="12">Weathered &amp; Faded</text> <!-- Divider --> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <!-- After side - Fresh exterior --> <rect x="200" width="200" height="260" fill="url(#freshPattern)" /> <g opacity="0.25"><rect x="215" y="40" width="80" height="80" fill="#C8E6C9" /> <rect x="305" y="80" width="60" height="60" fill="#A5D6A7" /> <rect x="230" y="160" width="120" height="50" fill="#81C784" /></g> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">🏡</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">Protected &amp; New</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #1e4078;">Exterior Walls</span>
+         <p class="text-white text-sm mt-2 font-medium">Weather-proof exterior finish</p>
+        </div>
+       </div>
+      </div><!-- Gallery Item 3 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <filter id="flatWall"><feTurbulence type="fractalNoise" basefrequency="0.9" numoctaves="4" seed="1" /> <feDisplacementMap in="SourceGraphic" scale="2" /></filter>
+          <pattern id="texturePattern" x="0" y="0" width="15" height="15" patternunits="userSpaceOnUse"><rect fill="#FFF9C4" width="15" height="15" /> <rect x="0" y="0" width="15" height="15" fill="url(#texGrad)" opacity="0.3" /></pattern>
+          <pattern id="texGrad2" x="0" y="0" width="20" height="20" patternunits="userSpaceOnUse"><rect fill="#F59E42" width="20" height="20" /> <circle cx="10" cy="10" r="3" fill="#E8772E" opacity="0.2" /> <circle cx="5" cy="5" r="1.5" fill="#E8772E" opacity="0.3" /> <circle cx="15" cy="15" r="1.5" fill="#E8772E" opacity="0.3" /></pattern>
+          <lineargradient id="texGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="white" /> <stop offset="50%" stop-color="#FFF59D" /> <stop offset="100%" stop-color="#FFE082" /></lineargradient>
+         </defs><!-- Before side - Plain flat wall --> <rect width="200" height="260" fill="#FFF9C4" /> <g opacity="0.2"><rect x="20" y="40" width="160" height="160" fill="#F57F17" /></g> <text x="100" y="50" text-anchor="middle" fill="#F57F17" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">🪟</text> <text x="100" y="220" text-anchor="middle" fill="#F57F17" font-size="12">Plain &amp; Boring</text> <!-- Divider --> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <!-- After side - Textured wall --> <rect x="200" width="200" height="260" fill="url(#texGrad2)" /> <g opacity="0.4" filter="url(#flatWall)"><circle cx="220" cy="50" r="25" fill="#E8772E" /> <circle cx="280" cy="80" r="20" fill="#F59E42" /> <circle cx="310" cy="120" r="30" fill="#E8772E" /> <circle cx="250" cy="140" r="22" fill="#F59E42" /> <circle cx="220" cy="180" r="28" fill="#E8772E" /></g> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">🎨</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">3D Texture Effect</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #e8772e;">Texture Design</span>
+         <p class="text-white text-sm mt-2 font-medium">Premium 3D texture finish</p>
+        </div>
+       </div>
+      </div><!-- Gallery Item 4 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <pattern id="palePattern" x="0" y="0" width="30" height="30" patternunits="userSpaceOnUse"><rect fill="#E8EAF6" width="30" height="30" /> <rect x="2" y="2" width="26" height="26" fill="#D1C4E9" opacity="0.15" /></pattern>
+          <pattern id="elegantPattern" x="0" y="0" width="35" height="35" patternunits="userSpaceOnUse"><rect fill="#5C6BC0" width="35" height="35" /> <path d="M0,17.5 Q8.75,12.5 17.5,17.5 T35,17.5" stroke="#7986CB" stroke-width="1" fill="none" opacity="0.3" /> <circle cx="8" cy="8" r="1.5" fill="#9FA8DA" opacity="0.4" /> <circle cx="27" cy="27" r="1.5" fill="#9FA8DA" opacity="0.4" /></pattern>
+         </defs><!-- Before side - Plain wall --> <rect width="200" height="260" fill="url(#palePattern)" /> <g opacity="0.15"><rect x="30" y="50" width="140" height="150" rx="8" fill="#7986CB" /></g> <text x="100" y="50" text-anchor="middle" fill="#5C6BC0" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">🛏️</text> <text x="100" y="220" text-anchor="middle" fill="#5C6BC0" font-size="12">Dull Bedroom</text> <!-- Divider --> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <!-- After side - Elegant bedroom --> <rect x="200" width="200" height="260" fill="url(#elegantPattern)" /> <g opacity="0.3"><rect x="230" y="50" width="140" height="150" rx="8" fill="#1A237E" /></g> <g opacity="0.25"><rect x="245" y="70" width="110" height="100" fill="white" opacity="0.1" rx="4" /></g> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">🏠</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">Elegant &amp; Calm</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #1e4078;">Bedroom</span>
+         <p class="text-white text-sm mt-2 font-medium">Elegant bedroom makeover</p>
+        </div>
+       </div>
+      </div><!-- Gallery Item 5 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <pattern id="plainWallPattern" x="0" y="0" width="25" height="25" patternunits="userSpaceOnUse"><rect fill="#D7CCC8" width="25" height="25" /> <circle cx="5" cy="5" r="0.8" fill="#A1887F" opacity="0.3" /></pattern>
+          <pattern id="wallpaperPattern" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse"><rect fill="#9575CD" width="40" height="40" /> <circle cx="10" cy="10" r="4" fill="#7E57C2" opacity="0.3" /> <circle cx="30" cy="30" r="4" fill="#7E57C2" opacity="0.3" /> <path d="M20,0 L20,40" stroke="#B39DDB" stroke-width="1.5" opacity="0.4" /> <path d="M0,20 L40,20" stroke="#B39DDB" stroke-width="1.5" opacity="0.4" /></pattern>
+         </defs><!-- Before side - Plain wall --> <rect width="200" height="260" fill="url(#plainWallPattern)" /> <g opacity="0.2"><rect x="25" y="40" width="150" height="160" fill="#A1887F" rx="4" /></g> <text x="100" y="50" text-anchor="middle" fill="#5D4037" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">📋</text> <text x="100" y="220" text-anchor="middle" fill="#5D4037" font-size="12">Bare Wall</text> <!-- Divider --> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <!-- After side - Wallpaper --> <rect x="200" width="200" height="260" fill="url(#wallpaperPattern)" /> <g opacity="0.3"><rect x="225" y="40" width="150" height="160" fill="#512DA8" rx="4" /></g> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">🖼️</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">Designer Wallpaper</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #e8772e;">Wallpaper</span>
+         <p class="text-white text-sm mt-2 font-medium">Designer wallpaper installation</p>
+        </div>
+       </div>
+      </div><!-- Gallery Item 6 -->
+      <div class="gallery-item animate-on-scroll" style="height: 260px;">
+       <div class="gallery-visual w-full h-full">
+        <svg viewbox="0 0 400 260" class="w-full h-full" preserveaspectratio="none"><defs>
+          <pattern id="damagedPattern" x="0" y="0" width="35" height="35" patternunits="userSpaceOnUse"><rect fill="#BCAAA4" width="35" height="35" /> <rect x="5" y="5" width="25" height="25" fill="#A1887F" opacity="0.2" /> <path d="M3,10 Q8,12 13,10" stroke="#8D6E63" stroke-width="0.8" fill="none" opacity="0.5" /> <path d="M15,3 L15,32" stroke="#8D6E63" stroke-width="0.5" fill="none" opacity="0.4" /></pattern>
+          <pattern id="renovatedPattern" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse"><rect fill="#FF6F00" width="40" height="40" /> <rect x="2" y="2" width="36" height="36" fill="white" opacity="0.08" /> <circle cx="20" cy="20" r="2.5" fill="#FFF" opacity="0.15" /></pattern>
+         </defs><!-- Before side - Damaged building --> <rect width="200" height="260" fill="url(#damagedPattern)" /> <g opacity="0.25"><rect x="20" y="30" width="160" height="200" fill="#6D4C41" /></g> <text x="100" y="50" text-anchor="middle" fill="#5D4037" font-size="16" font-weight="700">BEFORE</text> <text x="100" y="130" font-size="48" text-anchor="middle">🏚️</text> <text x="100" y="220" text-anchor="middle" fill="#5D4037" font-size="12">Old &amp; Tired</text> <!-- Divider --> <line x1="200" y1="0" x2="200" y2="260" stroke="white" stroke-width="4" /> <!-- After side - Renovated building --> <rect x="200" width="200" height="260" fill="url(#renovatedPattern)" /> <g opacity="0.3"><rect x="220" y="30" width="160" height="200" fill="#E65100" /></g> <g opacity="0.2"><polygon points="300,40 280,90 320,90" fill="white" /> <rect x="240" y="110" width="30" height="40" fill="white" opacity="0.15" /> <rect x="290" y="110" width="30" height="40" fill="white" opacity="0.15" /> <rect x="240" y="170" width="30" height="40" fill="white" opacity="0.15" /> <rect x="290" y="170" width="30" height="40" fill="white" opacity="0.15" /></g> <text x="300" y="50" text-anchor="middle" fill="white" font-size="16" font-weight="700">AFTER</text> <text x="300" y="130" font-size="48" text-anchor="middle">🏘️</text> <text x="300" y="220" text-anchor="middle" fill="white" font-size="12">Brand New</text>
+        </svg>
+       </div>
+       <div class="overlay">
+        <div><span class="ba-label text-white" style="background: #1e4078;">Full Renovation</span>
+         <p class="text-white text-sm mt-2 font-medium">Complete home repaint</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials -->
+   <section id="testimonials" class="py-16 sm:py-20 lg:py-24" style="background: white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-14 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.1); color: #e8772e;">
+       ग्राहकों की राय
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4" style="color: #1e4078;">What Our Clients Say</h2>
+      <div class="section-divider mx-auto" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="testimonial-card animate-on-scroll p-6 sm:p-8 rounded-2xl" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="flex items-center gap-1 mb-4"><span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+       </div>
+       <p class="text-sm leading-relaxed mb-6" style="color: #4a5568;">"Bahut safai se kaam kiya. Ghar bilkul naya lagne laga. Suresh bhai ki team ne bahut achha kaam kiya. Highly recommended!"</p>
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+         R
+        </div>
+        <div>
+         <div class="text-sm font-bold" style="color: #1e4078;">
+          Rajesh Patel
+         </div>
+         <div class="text-xs" style="color: #718096;">
+          Shajapur
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll p-6 sm:p-8 rounded-2xl" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="flex items-center gap-1 mb-4"><span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+       </div>
+       <p class="text-sm leading-relaxed mb-6" style="color: #4a5568;">"Time pe kaam pura kiya aur finishing bahut achhi thi. Paisa wasool service. Naye ghar mein sabse pehle inhe hi bulayenge."</p>
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #e8772e, #f59e42);">
+         M
+        </div>
+        <div>
+         <div class="text-sm font-bold" style="color: #1e4078;">
+          Mohan Sharma
+         </div>
+         <div class="text-xs" style="color: #718096;">
+          Ashta
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll p-6 sm:p-8 rounded-2xl" style="background: #f8f9fb; border: 1px solid #e2e8f0;">
+       <div class="flex items-center gap-1 mb-4"><span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+       </div>
+       <p class="text-sm leading-relaxed mb-6" style="color: #4a5568;">"Texture wall bahut sundar banayi hai. Mehman aate hain toh sabse pehle wall ki hi tarif karte hain. Thank you SKPainter!"</p>
+       <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+         S
+        </div>
+        <div>
+         <div class="text-sm font-bold" style="color: #1e4078;">
+          Sunita Verma
+         </div>
+         <div class="text-xs" style="color: #718096;">
+          Shajapur
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-16 sm:py-20 lg:py-24 relative overflow-hidden" style="background: linear-gradient(135deg, #1e4078 0%, #2a5298 50%, #1e4078 100%);">
+    <div class="absolute inset-0 pattern-dots"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-14 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background: rgba(232,119,46,0.2); color: #f59e42;">
+       संपर्क करें
+      </div>
+      <h2 id="contact-heading" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">Get Free Estimate Today</h2>
+      <div class="section-divider mx-auto" style="background: linear-gradient(to right, #e8772e, #f59e42);"></div>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-10"><!-- Contact Info -->
+      <div class="animate-on-scroll">
+       <div class="rounded-2xl p-6 sm:p-8 mb-6" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
+        <h3 id="owner-display" class="text-xl font-bold text-white mb-1">SURESH MIMROT</h3>
+        <p class="text-sm mb-6" style="color: rgba(255,255,255,0.6);">Owner &amp; Lead Painter, SKPainter</p>
+        <div class="space-y-4"><a href="tel:9754817745" class="flex items-center gap-4 p-4 rounded-xl transition-all hover:scale-[1.02]" style="background: rgba(255,255,255,0.06);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #e8772e, #f59e42);"><span class="text-xl">📞</span>
+          </div>
+          <div>
+           <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+            Phone / WhatsApp
+           </div>
+           <div id="phone-display" class="text-lg font-bold text-white">
+            9754817745
+           </div>
+          </div></a>
+         <div class="flex items-center gap-4 p-4 rounded-xl" style="background: rgba(255,255,255,0.06);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #1e4078, #2a5298);"><span class="text-xl">📍</span>
+          </div>
+          <div>
+           <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+            Service Area
+           </div>
+           <div class="text-base font-bold text-white">
+            Shajapur &amp; Ashta, MP
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center gap-4 p-4 rounded-xl" style="background: rgba(255,255,255,0.06);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #e8772e, #f59e42);"><span class="text-xl">🕐</span>
+          </div>
+          <div>
+           <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+            Working Hours
+           </div>
+           <div class="text-base font-bold text-white">
+            Mon - Sat: 8AM - 7PM
+           </div>
+          </div>
+         </div>
+        </div>
+       </div><a href="https://wa.me/919754817745?text=Hello%20SKPainter%2C%20I%20need%20painting%20service.%20Please%20give%20me%20a%20free%20estimate." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-4 rounded-2xl text-white font-bold text-lg transition-all hover:shadow-xl hover:scale-[1.02] pulse-animation" style="background: linear-gradient(135deg, #25D366, #128C7E);"> <span class="text-2xl">💬</span> WhatsApp pe Message Karein </a>
+      </div><!-- Contact Form -->
+      <div class="animate-on-scroll">
+       <form id="contact-form" class="rounded-2xl p-4 sm:p-8" style="background: rgba(255,255,255,0.95);">
+        <h3 class="text-base sm:text-lg font-bold mb-4 sm:mb-6" style="color: #1e4078;">Send Us a Message</h3>
+        <div class="space-y-3 sm:space-y-4">
+         <div><label for="form-name" class="block text-xs sm:text-sm font-medium mb-1.5" style="color: #4a5568;">Your Name *</label> <input type="text" id="form-name" required class="form-input w-full px-4 py-3 rounded-xl text-sm border transition-all" style="border-color: #e2e8f0; color: #1e4078; min-height: 48px;" placeholder="Aapka naam">
+         </div>
+         <div><label for="form-phone" class="block text-xs sm:text-sm font-medium mb-1.5" style="color: #4a5568;">Phone Number *</label> <input type="tel" id="form-phone" required inputmode="tel" class="form-input w-full px-4 py-3 rounded-xl text-sm border transition-all" style="border-color: #e2e8f0; color: #1e4078; min-height: 48px;" placeholder="Your phone number">
+         </div>
+         <div><label for="form-message" class="block text-xs sm:text-sm font-medium mb-1.5" style="color: #4a5568;">Message</label> <textarea id="form-message" rows="5" class="form-input w-full px-4 py-3 rounded-xl text-sm border transition-all resize-none" style="border-color: #e2e8f0; color: #1e4078; min-height: 120px;" placeholder="Aapki requirement..."></textarea>
+         </div><button type="submit" id="submit-btn" class="w-full py-3 sm:py-4 rounded-xl text-white font-bold text-sm sm:text-base transition-all hover:shadow-lg hover:scale-[1.02] active:scale-95" style="background: linear-gradient(135deg, #e8772e, #f59e42); min-height: 48px;"> 📩 Send Message </button>
+         <div id="form-success" class="hidden text-center py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold" style="background: #e8f5e9; color: #2e7d32;">
+          ✅ Message sent! We'll call you soon.
+         </div>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer style="background: #0f2847; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12"><!-- Brand -->
+      <div class="sm:col-span-2 lg:col-span-1">
+       <div class="flex items-center gap-2 mb-4">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #1e4078, #2a5298);">
+         <svg width="22" height="22" viewbox="0 0 24 24" fill="none"><path d="M3 21V9l9-7 9 7v12H3z" stroke="white" stroke-width="2" stroke-linejoin="round" /> <path d="M9 21v-6h6v6" stroke="white" stroke-width="2" stroke-linejoin="round" />
+         </svg>
+        </div>
+        <div><span class="font-extrabold text-lg text-white">SK</span><span class="font-bold text-lg" style="color: #e8772e;">Painter</span>
+        </div>
+       </div>
+       <p class="text-xs sm:text-sm leading-relaxed mb-4" style="color: rgba(255,255,255,0.5);">Professional home painting services in Shajapur &amp; Ashta. Trusted quality since 10+ years.</p>
+       <div class="flex items-center gap-2 sm:gap-3"><a href="https://wa.me/919754817745" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95" style="background: rgba(255,255,255,0.08); min-height: 44px; min-width: 44px;"> <span class="text-sm">💬</span> </a> <a href="tel:9754817745" class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95" style="background: rgba(255,255,255,0.08); min-height: 44px; min-width: 44px;"> <span class="text-sm">📞</span> </a> <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center" style="background: rgba(255,255,255,0.08); min-height: 44px; min-width: 44px;"> <span class="text-sm">📧</span> </span>
+       </div>
+      </div><!-- Quick Links -->
+      <div>
+       <h4 class="text-sm font-bold text-white mb-3 sm:mb-4">Quick Links</h4>
+       <div class="space-y-2"><a href="#hero" class="block text-xs sm:text-sm transition-all hover:translate-x-1 active:translate-x-2" style="color: rgba(255,255,255,0.5);">Home</a> <a href="#about" class="block text-xs sm:text-sm transition-all hover:translate-x-1 active:translate-x-2" style="color: rgba(255,255,255,0.5);">About Us</a> <a href="#services" class="block text-xs sm:text-sm transition-all hover:translate-x-1 active:translate-x-2" style="color: rgba(255,255,255,0.5);">Services</a> <a href="#gallery" class="block text-xs sm:text-sm transition-all hover:translate-x-1 active:translate-x-2" style="color: rgba(255,255,255,0.5);">Gallery</a> <a href="#contact" class="block text-xs sm:text-sm transition-all hover:translate-x-1 active:translate-x-2" style="color: rgba(255,255,255,0.5);">Contact</a>
+       </div>
+      </div><!-- Services -->
+      <div>
+       <h4 class="text-sm font-bold text-white mb-3 sm:mb-4">Services</h4>
+       <div class="space-y-2">
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">Interior Painting</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">Exterior Painting</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">Wallpaper</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">Texture Design</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">Renovation</p>
+       </div>
+      </div><!-- Contact -->
+      <div>
+       <h4 class="text-sm font-bold text-white mb-3 sm:mb-4">Contact Info</h4>
+       <div class="space-y-2">
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">📞 9754817745</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">📍 Shajapur, MP</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">📍 Ashta, MP</p>
+        <p class="text-xs sm:text-sm" style="color: rgba(255,255,255,0.5);">🕐 Mon-Sat: 8AM-7PM</p>
+       </div>
+      </div>
+     </div>
+     <div class="mt-6 sm:mt-10 pt-6 sm:pt-8" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+       <p class="text-xs text-center sm:text-left" style="color: rgba(255,255,255,0.35);">© 2024 SKPainter. All rights reserved.</p>
+       <p class="text-xs text-center sm:text-right" style="color: rgba(255,255,255,0.35);">Made with ❤️ for your dream home</p>
+      </div>
+     </div>
+    </div>
+   </footer><!-- Sticky Mobile Bottom Bar -->
+   <div class="sticky-mobile-bar" style="background: rgba(15,40,71,0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1);"><a href="tel:9754817745" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-white font-bold text-sm" style="background: linear-gradient(135deg, #e8772e, #f59e42);"> 📞 Call Now </a> <a href="https://wa.me/919754817745?text=Hello%20SKPainter%2C%20I%20need%20painting%20service" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-white font-bold text-sm" style="background: linear-gradient(135deg, #25D366, #128C7E);"> 💬 WhatsApp </a>
+   </div><!-- WhatsApp Floating Button --> <a href="https://wa.me/919754817745?text=Hello%20SKPainter%2C%20I%20need%20painting%20service" target="_blank" rel="noopener noreferrer" class="whatsapp-float" style="background: #25D366;">
+    <svg width="32" height="32" viewbox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_headline: 'Ghar Sirf Deewar\nNahi Hota…',
+      hero_subheadline: 'Professional Home Painting Services in Shajapur & Ashta',
+      about_heading: 'About SKPainter',
+      about_text: 'SKPainter is a trusted home painting service in Shajapur and Ashta. Led by Suresh Mimrot, we provide professional wall painting, texture design, wallpaper installation, and color consultation services. We believe in honest work, clean finishing, and customer satisfaction.',
+      contact_heading: 'Get Free Estimate Today',
+      owner_name: 'SURESH MIMROT',
+      phone_number: '9754817745',
+      background_color: '#1e4078',
+      surface_color: '#f8f9fb',
+      text_color: '#4a5568',
+      primary_action_color: '#e8772e',
+      secondary_action_color: '#25D366',
+      font_family: 'Outfit',
+      font_size: 16
+    };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const cfg = { ...defaultConfig, ...config };
+          const font = cfg.font_family || defaultConfig.font_family;
+          const baseFontStack = "'Noto Sans Devanagari', sans-serif";
+          const fullStack = `${font}, ${baseFontStack}`;
+          const baseSize = cfg.font_size || defaultConfig.font_size;
+
+          // Apply font to body
+          document.body.style.fontFamily = fullStack;
+
+          // Hero
+          const heroHeadline = document.getElementById('hero-headline');
+          if (heroHeadline) {
+            heroHeadline.textContent = cfg.hero_headline || defaultConfig.hero_headline;
+            heroHeadline.style.fontFamily = fullStack;
+            heroHeadline.style.fontSize = `${baseSize * 2.8}px`;
+          }
+          const heroSub = document.getElementById('hero-subheadline');
+          if (heroSub) {
+            heroSub.textContent = cfg.hero_subheadline || defaultConfig.hero_subheadline;
+            heroSub.style.fontFamily = fullStack;
+            heroSub.style.fontSize = `${baseSize * 1.15}px`;
+          }
+
+          // About
+          const aboutHead = document.getElementById('about-heading');
+          if (aboutHead) {
+            aboutHead.textContent = cfg.about_heading || defaultConfig.about_heading;
+            aboutHead.style.fontFamily = fullStack;
+            aboutHead.style.fontSize = `${baseSize * 2.2}px`;
+          }
+          const aboutTxt = document.getElementById('about-text');
+          if (aboutTxt) {
+            aboutTxt.textContent = cfg.about_text || defaultConfig.about_text;
+            aboutTxt.style.fontFamily = fullStack;
+            aboutTxt.style.fontSize = `${baseSize}px`;
+          }
+
+          // Contact
+          const contactHead = document.getElementById('contact-heading');
+          if (contactHead) {
+            contactHead.textContent = cfg.contact_heading || defaultConfig.contact_heading;
+            contactHead.style.fontFamily = fullStack;
+            contactHead.style.fontSize = `${baseSize * 2.2}px`;
+          }
+          const ownerDisp = document.getElementById('owner-display');
+          if (ownerDisp) {
+            ownerDisp.textContent = cfg.owner_name || defaultConfig.owner_name;
+            ownerDisp.style.fontFamily = fullStack;
+          }
+          const phoneDisp = document.getElementById('phone-display');
+          if (phoneDisp) {
+            phoneDisp.textContent = cfg.phone_number || defaultConfig.phone_number;
+          }
+
+          // Colors
+          const bgColor = cfg.background_color || defaultConfig.background_color;
+          const surfaceColor = cfg.surface_color || defaultConfig.surface_color;
+          const textColor = cfg.text_color || defaultConfig.text_color;
+          const primaryAction = cfg.primary_action_color || defaultConfig.primary_action_color;
+          const secondaryAction = cfg.secondary_action_color || defaultConfig.secondary_action_color;
+
+          // Apply background color to hero and contact sections
+          const heroSection = document.getElementById('hero');
+          if (heroSection) {
+            const heroBg = heroSection.querySelector('.pattern-dots');
+            if (heroBg) heroBg.style.backgroundColor = bgColor;
+          }
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.style.background = `linear-gradient(135deg, ${bgColor} 0%, ${bgColor}dd 50%, ${bgColor} 100%)`;
+          }
+          const whyUsSection = document.getElementById('why-us');
+          if (whyUsSection) {
+            whyUsSection.style.background = bgColor;
+          }
+          const footer = document.querySelector('footer');
+          if (footer) {
+            footer.style.background = bgColor + '99';
+          }
+
+          // Apply surface color to main sections background
+          const appWrapper = document.getElementById('app-wrapper');
+          if (appWrapper) appWrapper.style.backgroundColor = surfaceColor;
+
+          // Apply text color to paragraphs
+          document.querySelectorAll('p').forEach(p => {
+            if (!p.closest('footer') && !p.closest('#hero') && !p.closest('#contact') && !p.closest('#why-us')) {
+              p.style.color = textColor;
+            }
+          });
+
+          // Apply primary action color to CTA buttons
+          document.querySelectorAll('[style*="linear-gradient(135deg, #e8772e"]').forEach(el => {
+            el.style.background = `linear-gradient(135deg, ${primaryAction}, ${primaryAction}cc)`;
+          });
+
+          // Apply secondary action color to WhatsApp elements
+          const waFloat = document.querySelector('.whatsapp-float');
+          if (waFloat) waFloat.style.background = secondaryAction;
+        },
+        mapToCapabilities: (config) => {
+          const cfg = { ...defaultConfig, ...config };
+          return {
+            recolorables: [
+              {
+                get: () => cfg.background_color || defaultConfig.background_color,
+                set: (v) => { cfg.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+              },
+              {
+                get: () => cfg.surface_color || defaultConfig.surface_color,
+                set: (v) => { cfg.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+              },
+              {
+                get: () => cfg.text_color || defaultConfig.text_color,
+                set: (v) => { cfg.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+              },
+              {
+                get: () => cfg.primary_action_color || defaultConfig.primary_action_color,
+                set: (v) => { cfg.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); }
+              },
+              {
+                get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color,
+                set: (v) => { cfg.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); }
+              }
+            ],
+            borderables: [],
+            fontEditable: {
+              get: () => cfg.font_family || defaultConfig.font_family,
+              set: (v) => { cfg.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+            },
+            fontSizeable: {
+              get: () => cfg.font_size || defaultConfig.font_size,
+              set: (v) => { cfg.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+            }
+          };
+        },
+        mapToEditPanelValues: (config) => {
+          const cfg = { ...defaultConfig, ...config };
+          return new Map([
+            ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
+            ['hero_subheadline', cfg.hero_subheadline || defaultConfig.hero_subheadline],
+            ['about_heading', cfg.about_heading || defaultConfig.about_heading],
+            ['about_text', cfg.about_text || defaultConfig.about_text],
+            ['contact_heading', cfg.contact_heading || defaultConfig.contact_heading],
+            ['owner_name', cfg.owner_name || defaultConfig.owner_name],
+            ['phone_number', cfg.phone_number || defaultConfig.phone_number]
+          ]);
+        }
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    mobileMenuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden', !menuOpen);
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll animation observer
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    animatedElements.forEach(el => observer.observe(el));
+
+    // Nav link underline color
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.style.setProperty('--underline-color', '#e8772e');
+      const style = document.createElement('style');
+      style.textContent = `.nav-link::after { background: #e8772e; }`;
+      document.head.appendChild(style);
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const message = document.getElementById('form-message').value;
+
+      // Show success message
+      formSuccess.classList.remove('hidden');
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.textContent = '✅ Sent!';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+
+      // Open WhatsApp with the message
+      const waMsg = encodeURIComponent(`Hello SKPainter!\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message || 'I need painting service.'}`);
+      setTimeout(() => {
+        window.open(`https://wa.me/919754817745?text=${waMsg}`, '_blank');
+      }, 800);
+
+      // Reset after 4 seconds
+      setTimeout(() => {
+        contactForm.reset();
+        formSuccess.classList.add('hidden');
+        submitBtn.textContent = '📩 Send Message';
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }, 4000);
+    });
+
+    // Nav scroll effect
+    const nav = document.getElementById('main-nav');
+    const appWrapper = document.getElementById('app-wrapper');
+    appWrapper.addEventListener('scroll', () => {
+      if (appWrapper.scrollTop > 50) {
+        nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cc5f6e3848d17d7',t:'MTc3MDgzNTExOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+ <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log("Service Worker Registered"))
+      .catch(err => console.log("Service Worker Failed", err));
+  });
+}
+</script>
+</body>
+</html>
